@@ -1,0 +1,31 @@
+New log file opened at Thu Nov 12 20:21:49 EST 2015 by 22738@dyn-160-39-231-20.dyn.columbia.edu
+Taking next connection to: 53675
+New client attempting to connect on port: 53676-53675
+  Address = /160.39.231.20:53675
+This client on port 53676 has uuid 97529495-5407-4d05-a8a8-4a1f63f27d5f configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-97529495-5407-4d05-a8a8-4a1f63f27d5f
+Taking next connection to: 53675
+New client attempting to connect on port: 53677-53675
+  Address = /160.39.231.20:53675
+Handshake exception on socket: 53677
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 53675
+New client attempting to connect on port: 53678-53675
+  Address = /160.39.231.20:53675
+This client on port 53678 has uuid c8a6574c-d250-42b7-ae8e-7b605db4fbcc configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-97529495-5407-4d05-a8a8-4a1f63f27d5f, play-fork-run-c8a6574c-d250-42b7-ae8e-7b605db4fbcc
+Taking next connection to: 53675
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 22738@dyn-160-39-231-20.dyn.columbia.edu logs at Thu Nov 12 20:25:01 EST 2015, goodbye.
