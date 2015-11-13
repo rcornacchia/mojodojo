@@ -1,5 +1,5 @@
+@(one: Artworks, two: Artworks, three: Artworks, four: Artworks, five: Artworks, six: Artworks, seven: Artworks, eight: Artworks, nine: Artworks)
 <!DOCTYPE html>
-
 
 
 <html lang="en">
@@ -58,7 +58,7 @@
                 </a>-->
                   <!-- image trigger modal -->
                         <a data-toggle="modal" data-target="#myModal">
-                          <img src="https://s3.amazonaws.com/dojoart/art/pic4.jpg" class="gridImage">
+                          <img src=@one.filePath class="gridImage">
                         </a>
                         <style type="text/css">
                         
@@ -69,17 +69,18 @@
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Artwork Title</h4>
+                                <h4 class="modal-title" id="myModalLabel">@one.title</h4>
                               </div>
                               <div class="row">
                                 <div class="modal-body">
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        <img src="https://s3.amazonaws.com/dojoart/art/pic4.jpg" class="thubmnail img-responsive">
+                                        <img src=@one.filePath class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        User: abarkume
+                                        User: @one.user.username
+                                        @one.title
                                         <br>
-                                        Votes: <p id="numVotes">1337</p>
+                                        Votes: <p id="numVotes">@one.votes</p>
                                         <br>
                                         <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-arrows/008142-glossy-silver-icon-arrows-cut-arrow-up.png" id="upvoteButton" onclick="upvoteButtonClicked()" height="42" width="42">
                                     </div>
@@ -89,10 +90,10 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-lg-3 col-sm-3 col-xs-3">
-                                            Current Bid: $9565
+                                            Current Bid: @one.auction.currentBid
                                         </div>
                                         <div class="col-lg-4 col-sm-4 col-xs-4">
-                                            Hours Remaining: 25
+                                            Hours Remaining: @one.auction.closeDate
                                         </div>
                                         <div class="col-lg-5 col-sm-5 col-xs-5">
                                             <form class="form-inline" role="form">

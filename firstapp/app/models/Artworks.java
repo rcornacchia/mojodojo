@@ -19,8 +19,12 @@ public class Artworks extends Model {
     //@OneToMany(cascade = CascadeType.ALL)
     //public List<Users> users;
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "users_uid")
+    @JoinColumn(name = "uid")
     public Users user;
+    
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "aucId")
+    public Auctions auction;
     
      public static Finder<Long,Artworks> find = new Finder<Long,Artworks>(
     Long.class, Artworks.class

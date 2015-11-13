@@ -18,14 +18,18 @@ public class Application extends Controller {
 
         //List<Users> users = Users.find.where().orderBy("votes desc").findList();
         //List<Users> users = Users.find.where().orderBy("votes desc").findList();
-        List<Artworks> arts = Artworks.find.where().orderBy("votes desc").findList();
+        List<Artworks> arts = Artworks.find.where().orderBy("votes desc").setMaxRows(9).findList();
+        
+        //Artworks[] artArray=new Artworks[9];
+        //for (int i=0; i< artArray.length; i++)
+        //    artArray[i]=arts.get(i);
 
         //List<Artworks> artworksT = users.get(1).artworks;
         System.out.println("printing in controller, size: " + arts.get(0).user.email);
        // for(int i=0;i<artworksT.size();i++){
       //      System.out.println(artworksT.get(i).filePath);
        // } 
-         return ok(index.render());
+         return ok(index.render(arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0)));
      }
 
     public Result login() {
