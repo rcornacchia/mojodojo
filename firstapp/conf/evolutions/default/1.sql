@@ -30,13 +30,25 @@ create table users (
 ;
 
 
+create table artworks_users (
+  artworks_artid                 bigint not null,
+  users_uid                      bigint not null,
+  constraint pk_artworks_users primary key (artworks_artid, users_uid))
+;
 
+
+
+alter table artworks_users add constraint fk_artworks_users_artworks_01 foreign key (artworks_artid) references artworks (artid) on delete restrict on update restrict;
+
+alter table artworks_users add constraint fk_artworks_users_users_02 foreign key (users_uid) references users (uid) on delete restrict on update restrict;
 
 # --- !Downs
 
 SET FOREIGN_KEY_CHECKS=0;
 
 drop table artworks;
+
+drop table artworks_users;
 
 drop table comments;
 
