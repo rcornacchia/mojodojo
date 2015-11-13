@@ -19,8 +19,6 @@ public class Application extends Controller {
         //List<Users> users = Users.find.where().orderBy("votes desc").findList();
         //List<Users> users = Users.find.where().orderBy("votes desc").findList();
         List<Artworks> arts = Artworks.find.where().orderBy("votes desc").setMaxRows(9).findList();
-        arts.get(0).votes=9001;
-        arts.get(0).save();
         //Artworks[] artArray=new Artworks[9];
         //for (int i=0; i< artArray.length; i++)
         //    artArray[i]=arts.get(i);
@@ -30,7 +28,7 @@ public class Application extends Controller {
        // for(int i=0;i<artworksT.size();i++){
       //      System.out.println(artworksT.get(i).filePath);
        // } 
-         return ok(index.render(arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0)));
+         return ok(index.render(arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0),arts.get(0),Form.form(Index.class)));
      }
 
     public Result login() {
@@ -53,8 +51,40 @@ public class Application extends Controller {
             return null;
         }
 	}
+	
+	public static class Index {
 
+	    public Long bid;
+	    public Long artId;
+        
+	}
 
+    public Result submitBid(){
+        Form<Index> indexForm = Form.form(Index.class).bindFromRequest();
+        Long artId=indexForm.get().artId;
+        Artworks art=Artworks.find.byId(artId);
+        Long bid=indexForm.get().bid;
+        if (bid==-1){
+            if (art.votedOn==0){
+                art.votes++;
+                art.votedOn=1;
+                art.save();
+            }
+        }
+        else{
+            if (art.auction.currentBid<bid){
+                art.auction.currentBid=bid;
+                art.auction.haveHighBid="Yes";
+                art.auction.bidCount++;
+                art.auction.save();
+            }
+        }
+        return redirect(
+                routes.Application.index()
+            );
+
+    }
+    
     public Result authenticate() {
         Form<Login> loginForm = Form.form(Login.class).bindFromRequest();
         if (loginForm.hasErrors()) {

@@ -16,6 +16,7 @@ public class Auctions extends Model {
     public String closeDate;
     public Long bidCount;
     public Long currentBid;
+    public String haveHighBid;
     
     
     @OneToOne(cascade = CascadeType.ALL)

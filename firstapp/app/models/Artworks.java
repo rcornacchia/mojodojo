@@ -15,6 +15,7 @@ public class Artworks extends Model {
     public String filePath;
     public String title;
     public int votes;
+    public int votedOn;
     
     //@OneToMany(cascade = CascadeType.ALL)
     //public List<Users> users;

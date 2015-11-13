@@ -9,6 +9,7 @@ create table artworks (
   file_path                 varchar(255),
   title                     varchar(255),
   votes                     integer,
+  voted_on                  integer,
   aucId                     bigint,
   constraint uq_artworks_aucId unique (aucId),
   constraint pk_artworks primary key (artid))
@@ -21,6 +22,7 @@ create table auctions (
   close_date                varchar(255),
   bid_count                 bigint,
   current_bid               bigint,
+  have_high_bid             varchar(255),
   artwork_artid             bigint,
   constraint uq_auctions_artwork_artid unique (artwork_artid),
   constraint pk_auctions primary key (auc_id))
