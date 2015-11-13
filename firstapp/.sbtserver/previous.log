@@ -1,5 +1,5 @@
-New log file opened at Thu Nov 12 22:22:19 EST 2015 by 29943@dyn-160-39-231-20.dyn.columbia.edu
-jvm 29943@dyn-160-39-231-20.dyn.columbia.edu
+New log file opened at Thu Nov 12 22:54:05 EST 2015 by 32088@dyn-160-39-231-20.dyn.columbia.edu
+jvm 32088@dyn-160-39-231-20.dyn.columbia.edu
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.20-b23
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in /Users/Rob/code/mojodojo/firstapp/project, returning: (firstapp-build)
 Loading project definition from /Users/Rob/code/mojodojo/firstapp/project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@5470c47e, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@6f3a06e8, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -67,190 +67,10 @@ Set current project to firstapp (in build file:/Users/Rob/code/mojodojo/firstapp
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-> {file:/Users/Rob/code/mojodojo/firstapp/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@4789b575, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-
-Read from stdout: Compiling 1 Java source to /Users/Rob/code/mojodojo/firstapp/target/scala-2.11/classes...
-Compiling 1 Java source to /Users/Rob/code/mojodojo/firstapp/target/scala-2.11/classes...
-Attempting to call com.sun.tools.javac.api.JavacTool@74915b89 directly...
-Read from stdout: /Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java:21: cannot find symbol
-Read from stdout: symbol:   variable Form
-Read from stdout: location: class controllers.Application
-/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java:21: cannot find symbol
-  symbol:   variable Form
-  location: class controllers.Application
-Read from stdout: Form
-Form
-Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
-(compile:compileIncremental) javac returned nonzero exit code
-Total time: 1 s, completed Nov 12, 2015 10:22:23 PM
-> server-post-command-error-handler
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/Rob/code/mojodojo/firstapp/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@16f9c1ba, check cycles: false
-Total time: 0 s, completed Nov 12, 2015 10:22:23 PM
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/Rob/code/mojodojo/firstapp/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@5a763018, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-
-Read from stdout: Compiling 1 Java source to /Users/Rob/code/mojodojo/firstapp/target/scala-2.11/classes...
-Compiling 1 Java source to /Users/Rob/code/mojodojo/firstapp/target/scala-2.11/classes...
-Attempting to call com.sun.tools.javac.api.JavacTool@bbc8724 directly...
-Read from stdout: /Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java:21: cannot find symbol
-Read from stdout: symbol:   variable Form
-Read from stdout: location: class controllers.Application
-/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java:21: cannot find symbol
-  symbol:   variable Form
-  location: class controllers.Application
-Read from stdout: Form
-Form
-Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
-(compile:compileIncremental) javac returned nonzero exit code
-Total time: 1 s, completed Nov 12, 2015 10:22:24 PM
-> server-post-command-error-handler
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/Rob/code/mojodojo/firstapp/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@c5e6cae, check cycles: false
-Total time: 0 s, completed Nov 12, 2015 10:22:24 PM
-> server-post-command-cleanup
-> server-handle-next-server-request
-> compile
-Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@584937f6, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-
-Read from stdout: Compiling 1 Java source to /Users/Rob/code/mojodojo/firstapp/target/scala-2.11/classes...
-Compiling 1 Java source to /Users/Rob/code/mojodojo/firstapp/target/scala-2.11/classes...
-Attempting to call com.sun.tools.javac.api.JavacTool@69daf2b2 directly...
-Read from stdout: /Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java:6: ';' expected
-/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java:6: ';' expected
-Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
-(compile:compileIncremental) javac returned nonzero exit code
-Total time: 0 s, completed Nov 12, 2015 10:23:46 PM
-> server-post-command-error-handler
-> server-post-command-cleanup
-> server-handle-next-server-request
-> compile
-Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@46ec05b, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-
-Read from stdout: Compiling 1 Java source to /Users/Rob/code/mojodojo/firstapp/target/scala-2.11/classes...
-Compiling 1 Java source to /Users/Rob/code/mojodojo/firstapp/target/scala-2.11/classes...
-Attempting to call com.sun.tools.javac.api.JavacTool@6a3ca4c7 directly...
-Read from stdout: /Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java:6: ';' expected
-/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java:6: ';' expected
-Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
-(compile:compileIncremental) javac returned nonzero exit code
-Total time: 0 s, completed Nov 12, 2015 10:23:54 PM
-> server-post-command-error-handler
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/Rob/code/mojodojo/firstapp/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@4e7b410c, check cycles: false
-Total time: 0 s, completed Nov 12, 2015 10:25:11 PM
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/Rob/code/mojodojo/firstapp/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@1cafb80, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java)
-
-Read from stdout: Compiling 1 Java source to /Users/Rob/code/mojodojo/firstapp/target/scala-2.11/classes...
-Compiling 1 Java source to /Users/Rob/code/mojodojo/firstapp/target/scala-2.11/classes...
-Attempting to call com.sun.tools.javac.api.JavacTool@29ae2ef4 directly...
-Read from stdout: /Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java:6: ';' expected
-/Users/Rob/code/mojodojo/firstapp/app/controllers/Application.java:6: ';' expected
-Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
-(compile:compileIncremental) javac returned nonzero exit code
-Total time: 0 s, completed Nov 12, 2015 10:25:12 PM
-> server-post-command-error-handler
-> server-post-command-cleanup
-> server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
 Closing listening server socket
 Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 29943@dyn-160-39-231-20.dyn.columbia.edu logs at Thu Nov 12 22:25:14 EST 2015, goodbye.
+Closing the 32088@dyn-160-39-231-20.dyn.columbia.edu logs at Thu Nov 12 22:54:09 EST 2015, goodbye.
