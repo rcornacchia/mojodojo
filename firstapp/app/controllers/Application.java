@@ -17,7 +17,7 @@ public class Application extends Controller {
      public Result index() {
 
         List<Users> users = Users.find.all();
-        List<Artworks> artworksT = users.get(0).artworks;
+        List<Artworks> artworksT = users.get(1).artworks;
         System.out.println("printing in controller, size: " + artworksT.size());
        // for(int i=0;i<artworksT.size();i++){
       //      System.out.println(artworksT.get(i).filePath);

@@ -16,8 +16,8 @@ public class Artworks extends Model {
     public String title;
     public int votes;
     
-    @ManyToMany
-    public List<Users> users;
+    //@ManyToMany
+    //public List<Users> users;
     
      public static Finder<Long,Artworks> find = new Finder<Long,Artworks>(
     Long.class, Artworks.class

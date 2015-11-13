@@ -5,6 +5,7 @@
 
 create table artworks (
   artid                     bigint auto_increment not null,
+  users_uid                 bigint not null,
   uid                       bigint,
   file_path                 varchar(255),
   title                     varchar(255),
@@ -29,26 +30,16 @@ create table users (
   constraint pk_users primary key (uid))
 ;
 
-
-create table artworks_users (
-  artworks_artid                 bigint not null,
-  users_uid                      bigint not null,
-  constraint pk_artworks_users primary key (artworks_artid, users_uid))
-;
+alter table artworks add constraint fk_artworks_users_1 foreign key (users_uid) references users (uid) on delete restrict on update restrict;
+create index ix_artworks_users_1 on artworks (users_uid);
 
 
-
-alter table artworks_users add constraint fk_artworks_users_artworks_01 foreign key (artworks_artid) references artworks (artid) on delete restrict on update restrict;
-
-alter table artworks_users add constraint fk_artworks_users_users_02 foreign key (users_uid) references users (uid) on delete restrict on update restrict;
 
 # --- !Downs
 
 SET FOREIGN_KEY_CHECKS=0;
 
 drop table artworks;
-
-drop table artworks_users;
 
 drop table comments;
 
