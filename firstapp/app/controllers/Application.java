@@ -24,10 +24,8 @@ public class Application extends Controller {
     }
 
 
-    public static Result authenticate() {
-        Form<Login> loginForm = form(Login.class).bindFromRequest();
-        return ok();
-    }
+
+
 
     public static class Login {
         public String email;
