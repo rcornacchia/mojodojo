@@ -1,9 +1,14 @@
+
 @(form: Form[Application.Login])
 
 
 <html>
     <head>
         <title>Dojo</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+        integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+        crossorigin="anonymous">
     </head>
     <body>
         <header>
@@ -12,16 +17,18 @@
         @helper.form(routes.Application.authenticate) {
            <h1>Sign in</h1>
 
-           <p>
-               <input type="email" name="email" placeholder="Email" value="@form("email").value">
-           </p>
-           <p>
-               <input type="password" name="password" placeholder="Password">
-           </p>
-           <p>
-               <button type="submit">Login</button>
-           </p>
+            <input type="email" name="email" class="form-control input-lg" placeholder="Email" value="@form("email").value">
+
+
+            <input type="password" name="password"  class="form-control input-lg" placeholder="Password">
+
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+
         }
+
+
+
 
 
     </body>
