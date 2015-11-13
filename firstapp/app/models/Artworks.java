@@ -16,8 +16,11 @@ public class Artworks extends Model {
     public String title;
     public int votes;
     
-    //@ManyToMany
+    //@OneToMany(cascade = CascadeType.ALL)
     //public List<Users> users;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "users_uid")
+    public Users user;
     
      public static Finder<Long,Artworks> find = new Finder<Long,Artworks>(
     Long.class, Artworks.class

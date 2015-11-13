@@ -16,9 +16,12 @@ public class Application extends Controller {
 
      public Result index() {
 
-        List<Users> users = Users.find.all();
-        List<Artworks> artworksT = users.get(1).artworks;
-        System.out.println("printing in controller, size: " + artworksT.size());
+        //List<Users> users = Users.find.where().orderBy("votes desc").findList();
+        //List<Users> users = Users.find.where().orderBy("votes desc").findList();
+        List<Artworks> arts = Artworks.find.where().orderBy("votes desc").findList();
+
+        //List<Artworks> artworksT = users.get(1).artworks;
+        System.out.println("printing in controller, size: " + arts.get(0).user.email);
        // for(int i=0;i<artworksT.size();i++){
       //      System.out.println(artworksT.get(i).filePath);
        // } 

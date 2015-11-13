@@ -21,8 +21,11 @@ public class Users extends Model {
     //public List<Artworks> artworks;
     //@ManyToMany(mappedBy = "users")
     //public List<Artworks> artworks;
-    @OneToMany(cascade = CascadeType.ALL)
-    public List<Artworks> artworks; 
+    //@ManyToMany(mappedBy="users")
+    //public List<Artworks> artworks; 
+    
+     @OneToMany(cascade = CascadeType.ALL)
+        public List<Artworks> artworks;
     
                public static Finder<Long,Users> find = new Finder<Long,Users>(
     Long.class, Users.class
