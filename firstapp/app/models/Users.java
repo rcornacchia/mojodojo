@@ -8,11 +8,13 @@ import play.db.ebean.*;
 public class Users extends Model {
     
     @Id
-    public Long id;
+    public Long uid;
     
     
     public String username;
-    
+    public String password;
+    public String email;
+    public int votes;
     
     
 }
