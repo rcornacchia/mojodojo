@@ -9,30 +9,36 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
         integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
         crossorigin="anonymous">
-        
-        <!-- Custom styles for this template -->
-    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/signin.css")">
     </head>
+    
+    
     <body>
-        <header>
+
+    <header>
             <a href="@routes.Application.index" id="logo"><span>Zen</span>tasks</a>
         </header>
         @helper.form(routes.Application.authenticate) {
-           <h1>Sign in</h1>
-
-            <input type="email" name="email" class="form-control input-lg" placeholder="Email" value="@form("email").value">
+    <div class="container">
 
 
-            <input type="password" name="password"  class="form-control input-lg" placeholder="Password">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="email" class="sr-only">Email address</label>
+        <input type="email" id="email" name = "email" class="form-control" placeholder="Email address" value="@form("email").value" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name = "password" id="password" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    }
+
+    </div> <!-- /container -->
 
 
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-
-        }
-
-
-
-
-
-    </body>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
+
