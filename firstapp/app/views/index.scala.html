@@ -52,9 +52,6 @@
           <h2>Top Art<p class="lead">Vote the Best Art!</p></h2>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                    <!--<a href="#">
-                    <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
-                </a>-->
                   <!-- image trigger modal -->
                         <a data-toggle="modal" data-target="#myModal">
                           <img src=@one.filePath class="gridImage">
@@ -89,7 +86,6 @@
                                                    <input type=number name="artId" placeholder="Bid" value=@one.artid hidden>
                                                </p>
                                                <p>
-                                                    <!--<img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-arrows/008142-glossy-silver-icon-arrows-cut-arrow-up.png" id="upvoteButton" type="submit" onclick="this.form.submit(); this.disabled=true;" height="42" width="42">-->
                                                      <button type="submit" class="btn btn-default">Upvote</button>
                                                </p>
                                                }
@@ -137,28 +133,24 @@
                         </div>
                     </div>
         <div class="col-lg-4 col-sm-6 col-xs-12">
-                    <!--<a href="#">
-                    <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
-                </a>-->
-                  <!-- image trigger modal -->
-                        <a data-toggle="modal" data-target="#myModal">
-                          <img src="https://s3.amazonaws.com/dojoart/art/pic1.jpg" class="gridImage">
+                        <a data-toggle="modal" data-target="#myModal1">
+                          <img src="@two.filePath" class="gridImage">
                         </a>
                         <style type="text/css">
 
                         </style>
                         <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Artwork Title</h4>
+                                <h4 class="modal-title" id="myModalLabel">@two.title</h4>
                               </div>
                               <div class="row">
                                 <div class="modal-body">
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        <img src="https://s3.amazonaws.com/dojoart/art/pic1.jpg" class="thubmnail img-responsive">
+                                        <img src="@two.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
                                         User: abarkume
@@ -178,28 +170,24 @@
                     </div>
 
                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                    <!--<a href="#">
-                    <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
-                </a>-->
-                  <!-- image trigger modal -->
-                        <a data-toggle="modal" data-target="#myModal">
-                          <img src="https://s3.amazonaws.com/dojoart/art/pic1.jpg" class="gridImage">
+                        <a data-toggle="modal" data-target="#myModal2">
+                          <img src="@three.filePath" class="gridImage">
                         </a>
                         <style type="text/css">
 
                         </style>
                         <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Artwork Title</h4>
+                                <h4 class="modal-title" id="myModalLabel">@three.title</h4>
                               </div>
                               <div class="row">
                                 <div class="modal-body">
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        <img src="https://s3.amazonaws.com/dojoart/art/pic2.jpg" class="thubmnail img-responsive">
+                                        <img src="@three.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
                                         User: abarkume
@@ -220,18 +208,14 @@
     </div>
      <div class="row">
                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                    <!--<a href="#">
-                    <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
-                </a>-->
-                  <!-- image trigger modal -->
-                        <a data-toggle="modal" data-target="#myModal">
-                          <img src="https://s3.amazonaws.com/dojoart/art/pic4.jpg" class="gridImage">
+                        <a data-toggle="modal" data-target="#myModal3">
+                          <img src="@four.filePath" class="gridImage">
                         </a>
                         <style type="text/css">
 
                         </style>
                         <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -241,7 +225,7 @@
                               <div class="row">
                                 <div class="modal-body">
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        <img src="https://s3.amazonaws.com/dojoart/art/pic4.jpg" class="thubmnail img-responsive">
+                                        <img src="@four.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
                                         User: abarkume
@@ -264,14 +248,14 @@
                     <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
                 </a>-->
                   <!-- image trigger modal -->
-                        <a data-toggle="modal" data-target="#myModal">
-                          <img src="https://s3.amazonaws.com/dojoart/art/pic4.jpg" class="gridImage">
+                        <a data-toggle="modal" data-target="#myModal4">
+                          <img src="@five.filePath" class="gridImage">
                         </a>
                         <style type="text/css">
 
                         </style>
                         <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -281,7 +265,7 @@
                               <div class="row">
                                 <div class="modal-body">
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        <img src="https://s3.amazonaws.com/dojoart/art/pic4.jpg" class="thubmnail img-responsive">
+                                        <img src="@five.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
                                         User: abarkume
@@ -305,14 +289,14 @@
                     <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
                 </a>-->
                   <!-- image trigger modal -->
-                        <a data-toggle="modal" data-target="#myModal">
-                          <img src="https://s3.amazonaws.com/dojoart/art/pic5.jpg" class="gridImage">
+                        <a data-toggle="modal" data-target="#myModal5">
+                          <img src="@six.filePath" class="gridImage">
                         </a>
                         <style type="text/css">
 
                         </style>
                         <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -322,7 +306,7 @@
                               <div class="row">
                                 <div class="modal-body">
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        <img src="https://s3.amazonaws.com/dojoart/art/pic5.jpg" class="thubmnail img-responsive">
+                                        <img src="@six.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
                                         User: abarkume
@@ -347,14 +331,14 @@
                     <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
                 </a>-->
                   <!-- image trigger modal -->
-                        <a data-toggle="modal" data-target="#myModal">
-                          <img src="https://s3.amazonaws.com/dojoart/art/pic6.jpg" class="gridImage">
+                        <a data-toggle="modal" data-target="#myModal6">
+                          <img src="@seven.filePath" class="gridImage">
                         </a>
                         <style type="text/css">
 
                         </style>
                         <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -364,7 +348,7 @@
                               <div class="row">
                                 <div class="modal-body">
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        <img src="https://s3.amazonaws.com/dojoart/art/pic6.jpg" class="thubmnail img-responsive">
+                                        <img src="@seven.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
                                         User: abarkume
@@ -387,14 +371,14 @@
                     <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
                 </a>-->
                   <!-- image trigger modal -->
-                        <a data-toggle="modal" data-target="#myModal">
+                        <a data-toggle="modal" data-target="#myModal7">
                           <img src="https://s3.amazonaws.com/dojoart/art/pic7.jpg" class="gridImage">
                         </a>
                         <style type="text/css">
 
                         </style>
                         <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -428,14 +412,14 @@
                     <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
                 </a>-->
                   <!-- image trigger modal -->
-                        <a data-toggle="modal" data-target="#myModal">
+                        <a data-toggle="modal" data-target="#myModal8">
                           <img src="https://s3.amazonaws.com/dojoart/art/pic8.jpg" class="gridImage">
                         </a>
                         <style type="text/css">
 
                         </style>
                         <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
