@@ -74,7 +74,6 @@
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
                                         User: @one.user.username
-                                        @one.title
                                         <br>
                                         Votes: <p id="numVotes">@one.votes</p>
                                         <br>
@@ -153,16 +152,42 @@
                                         <img src="@two.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        User: abarkume
+                                        User: @two.user.username
                                         <br>
-                                        Votes: <p id="numVotes">1337</p>
+                                        Votes: <p id="numVotes">@two.votes</p>
                                         <br>
                                         <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-arrows/008142-glossy-silver-icon-arrows-cut-arrow-up.png" id="upvoteButton" onclick="upvoteButtonClicked()" height="42" width="42">
                                     </div>
                                 </div>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-2 col-xs-2">
+                                            Current Bid: @two.auction.currentBid
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            End: @two.auction.closeDate
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            Have High Bid: @two.auction.haveHighBid
+                                        </div>
+                                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                                            @helper.form(routes.Application.submitBid()) {
+                                            Submit Bid
+                                               <p>
+                                                   <input type=number name="bid" placeholder="Bid">
+                                               </p>
+                                               <p>
+                                                   <input type=number name="artId" placeholder="Bid" value=@one.artid hidden>
+                                               </p>
+                                               <p>
+                                                   <button type="submit" class="btn btn-default">Submit</button>
+                                               </p>
+                                               }
+                                        </div>
+                                    </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -190,16 +215,49 @@
                                         <img src="@three.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        User: abarkume
+                                        User: @three.user.username
                                         <br>
-                                        Votes: <p id="numVotes">1337</p>
+                                        Votes: <p id="numVotes">@three.votes</p>
                                         <br>
                                         <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-arrows/008142-glossy-silver-icon-arrows-cut-arrow-up.png" id="upvoteButton" onclick="upvoteButtonClicked()" height="42" width="42">
                                     </div>
                                 </div>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-2 col-xs-2">
+                                            Current Bid: @three.auction.currentBid
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            End: @three.auction.closeDate
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            Have High Bid: @three.auction.haveHighBid
+                                        </div>
+                                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                                            <!---<form class="form-inline" role="form">
+                                                <div class="form-group">
+                                                    <label for="email">Your Bid:</label>
+                                                    <input type="number" class="form-control" id="email">
+                                                  </div>
+                                                  <button type="submit" class="btn btn-default">Submit</button>
+                                                </form>--->
+                                            @helper.form(routes.Application.submitBid()) {
+                                            Submit Bid
+                                               <p>
+                                                   <input type=number name="bid" placeholder="Bid">
+                                               </p>
+                                               <p>
+                                                   <input type=number name="artId" placeholder="Bid" value=@one.artid hidden>
+                                               </p>
+                                               <p>
+                                                   <button type="submit" class="btn btn-default">Submit</button>
+                                               </p>
+                                               }
+                                        </div>
+                                    </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -220,7 +278,7 @@
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Artwork Title</h4>
+                                <h4 class="modal-title" id="myModalLabel">@four.title</h4>
                               </div>
                               <div class="row">
                                 <div class="modal-body">
@@ -228,16 +286,49 @@
                                         <img src="@four.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        User: abarkume
+                                        User: @four.user.username
                                         <br>
-                                        Votes: <p id="numVotes">1337</p>
+                                        Votes: <p id="numVotes">@four.votes</p>
                                         <br>
                                         <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-arrows/008142-glossy-silver-icon-arrows-cut-arrow-up.png" id="upvoteButton" onclick="upvoteButtonClicked()" height="42" width="42">
                                     </div>
                                 </div>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-2 col-xs-2">
+                                            Current Bid: @four.auction.currentBid
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            End: @four.auction.closeDate
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            Have High Bid: @four.auction.haveHighBid
+                                        </div>
+                                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                                            <!---<form class="form-inline" role="form">
+                                                <div class="form-group">
+                                                    <label for="email">Your Bid:</label>
+                                                    <input type="number" class="form-control" id="email">
+                                                  </div>
+                                                  <button type="submit" class="btn btn-default">Submit</button>
+                                                </form>--->
+                                            @helper.form(routes.Application.submitBid()) {
+                                            Submit Bid
+                                               <p>
+                                                   <input type=number name="bid" placeholder="Bid">
+                                               </p>
+                                               <p>
+                                                   <input type=number name="artId" placeholder="Bid" value=@one.artid hidden>
+                                               </p>
+                                               <p>
+                                                   <button type="submit" class="btn btn-default">Submit</button>
+                                               </p>
+                                               }
+                                        </div>
+                                    </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -260,7 +351,7 @@
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Artwork Title</h4>
+                                <h4 class="modal-title" id="myModalLabel">@five.title</h4>
                               </div>
                               <div class="row">
                                 <div class="modal-body">
@@ -268,16 +359,49 @@
                                         <img src="@five.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        User: abarkume
+                                        User: @five.user.username
                                         <br>
-                                        Votes: <p id="numVotes">1337</p>
+                                        Votes: <p id="numVotes">@five.votes</p>
                                         <br>
                                         <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-arrows/008142-glossy-silver-icon-arrows-cut-arrow-up.png" id="upvoteButton" onclick="upvoteButtonClicked()" height="42" width="42">
                                     </div>
                                 </div>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-2 col-xs-2">
+                                            Current Bid: @five.auction.currentBid
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            End: @five.auction.closeDate
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            Have High Bid: @five.auction.haveHighBid
+                                        </div>
+                                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                                            <!---<form class="form-inline" role="form">
+                                                <div class="form-group">
+                                                    <label for="email">Your Bid:</label>
+                                                    <input type="number" class="form-control" id="email">
+                                                  </div>
+                                                  <button type="submit" class="btn btn-default">Submit</button>
+                                                </form>--->
+                                            @helper.form(routes.Application.submitBid()) {
+                                            Submit Bid
+                                               <p>
+                                                   <input type=number name="bid" placeholder="Bid">
+                                               </p>
+                                               <p>
+                                                   <input type=number name="artId" placeholder="Bid" value=@one.artid hidden>
+                                               </p>
+                                               <p>
+                                                   <button type="submit" class="btn btn-default">Submit</button>
+                                               </p>
+                                               }
+                                        </div>
+                                    </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -301,7 +425,7 @@
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Artwork Title</h4>
+                                <h4 class="modal-title" id="myModalLabel">@six.title</h4>
                               </div>
                               <div class="row">
                                 <div class="modal-body">
@@ -309,16 +433,49 @@
                                         <img src="@six.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        User: abarkume
+                                        User: @six.user.username
                                         <br>
-                                        Votes: <p id="numVotes">1337</p>
+                                        Votes: <p id="numVotes">@six.votes</p>
                                         <br>
                                         <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-arrows/008142-glossy-silver-icon-arrows-cut-arrow-up.png" id="upvoteButton" onclick="upvoteButtonClicked()" height="42" width="42">
                                     </div>
                                 </div>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-2 col-xs-2">
+                                            Current Bid: @six.auction.currentBid
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            End: @six.auction.closeDate
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            Have High Bid: @six.auction.haveHighBid
+                                        </div>
+                                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                                            <!---<form class="form-inline" role="form">
+                                                <div class="form-group">
+                                                    <label for="email">Your Bid:</label>
+                                                    <input type="number" class="form-control" id="email">
+                                                  </div>
+                                                  <button type="submit" class="btn btn-default">Submit</button>
+                                                </form>--->
+                                            @helper.form(routes.Application.submitBid()) {
+                                            Submit Bid
+                                               <p>
+                                                   <input type=number name="bid" placeholder="Bid">
+                                               </p>
+                                               <p>
+                                                   <input type=number name="artId" placeholder="Bid" value=@one.artid hidden>
+                                               </p>
+                                               <p>
+                                                   <button type="submit" class="btn btn-default">Submit</button>
+                                               </p>
+                                               }
+                                        </div>
+                                    </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -343,7 +500,7 @@
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Artwork Title</h4>
+                                <h4 class="modal-title" id="myModalLabel">@seven.title</h4>
                               </div>
                               <div class="row">
                                 <div class="modal-body">
@@ -351,16 +508,49 @@
                                         <img src="@seven.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        User: abarkume
+                                        User: @seven.user.username
                                         <br>
-                                        Votes: <p id="numVotes">1337</p>
+                                        Votes: <p id="numVotes">@seven.votes</p>
                                         <br>
                                         <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-arrows/008142-glossy-silver-icon-arrows-cut-arrow-up.png" id="upvoteButton" onclick="upvoteButtonClicked()" height="42" width="42">
                                     </div>
                                 </div>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-2 col-xs-2">
+                                            Current Bid: @seven.auction.currentBid
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            End: @seven.auction.closeDate
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            Have High Bid: @seven.auction.haveHighBid
+                                        </div>
+                                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                                            <!---<form class="form-inline" role="form">
+                                                <div class="form-group">
+                                                    <label for="email">Your Bid:</label>
+                                                    <input type="number" class="form-control" id="email">
+                                                  </div>
+                                                  <button type="submit" class="btn btn-default">Submit</button>
+                                                </form>--->
+                                            @helper.form(routes.Application.submitBid()) {
+                                            Submit Bid
+                                               <p>
+                                                   <input type=number name="bid" placeholder="Bid">
+                                               </p>
+                                               <p>
+                                                   <input type=number name="artId" placeholder="Bid" value=@one.artid hidden>
+                                               </p>
+                                               <p>
+                                                   <button type="submit" class="btn btn-default">Submit</button>
+                                               </p>
+                                               }
+                                        </div>
+                                    </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -372,7 +562,7 @@
                 </a>-->
                   <!-- image trigger modal -->
                         <a data-toggle="modal" data-target="#myModal7">
-                          <img src="https://s3.amazonaws.com/dojoart/art/pic7.jpg" class="gridImage">
+                          <img src="@eight.filePath" class="gridImage">
                         </a>
                         <style type="text/css">
 
@@ -383,24 +573,57 @@
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Artwork Title</h4>
+                                <h4 class="modal-title" id="myModalLabel">@eight.title</h4>
                               </div>
                               <div class="row">
                                 <div class="modal-body">
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        <img src="https://s3.amazonaws.com/dojoart/art/pic7.jpg" class="thubmnail img-responsive">
+                                        <img src="@eight.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        User: abarkume
+                                        User: @eight.user.username
                                         <br>
-                                        Votes: <p id="numVotes">1337</p>
+                                        Votes: <p id="numVotes">@eight.votes</p>
                                         <br>
                                         <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-arrows/008142-glossy-silver-icon-arrows-cut-arrow-up.png" id="upvoteButton" onclick="upvoteButtonClicked()" height="42" width="42">
                                     </div>
                                 </div>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-2 col-xs-2">
+                                            Current Bid: @eight.auction.currentBid
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            End: @eight.auction.closeDate
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            Have High Bid: @eight.auction.haveHighBid
+                                        </div>
+                                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                                            <!---<form class="form-inline" role="form">
+                                                <div class="form-group">
+                                                    <label for="email">Your Bid:</label>
+                                                    <input type="number" class="form-control" id="email">
+                                                  </div>
+                                                  <button type="submit" class="btn btn-default">Submit</button>
+                                                </form>--->
+                                            @helper.form(routes.Application.submitBid()) {
+                                            Submit Bid
+                                               <p>
+                                                   <input type=number name="bid" placeholder="Bid">
+                                               </p>
+                                               <p>
+                                                   <input type=number name="artId" placeholder="Bid" value=@one.artid hidden>
+                                               </p>
+                                               <p>
+                                                   <button type="submit" class="btn btn-default">Submit</button>
+                                               </p>
+                                               }
+                                        </div>
+                                    </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -413,7 +636,7 @@
                 </a>-->
                   <!-- image trigger modal -->
                         <a data-toggle="modal" data-target="#myModal8">
-                          <img src="https://s3.amazonaws.com/dojoart/art/pic8.jpg" class="gridImage">
+                          <img src="@nine.filePath" class="gridImage">
                         </a>
                         <style type="text/css">
 
@@ -424,24 +647,57 @@
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Artwork Title</h4>
+                                <h4 class="modal-title" id="myModalLabel">@nine.title</h4>
                               </div>
                               <div class="row">
                                 <div class="modal-body">
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        <img src="https://s3.amazonaws.com/dojoart/art/pic8.jpg" class="thubmnail img-responsive">
+                                        <img src="@nine.filePath" class="thubmnail img-responsive">
                                     </div>
                                     <div class="col-lg-6 col-sm-6 col-xs-6">
-                                        User: abarkume
+                                        User: @nine.user.username
                                         <br>
-                                        Votes: <p id="numVotes">1337</p>
+                                        Votes: <p id="numVotes">@nine.votes</p>
                                         <br>
                                         <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-arrows/008142-glossy-silver-icon-arrows-cut-arrow-up.png" id="upvoteButton" onclick="upvoteButtonClicked()" height="42" width="42">
                                     </div>
                                 </div>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-2 col-xs-2">
+                                            Current Bid: @nine.auction.currentBid
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            End: @nine.auction.closeDate
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                                            Have High Bid: @nine.auction.haveHighBid
+                                        </div>
+                                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                                            <!---<form class="form-inline" role="form">
+                                                <div class="form-group">
+                                                    <label for="email">Your Bid:</label>
+                                                    <input type="number" class="form-control" id="email">
+                                                  </div>
+                                                  <button type="submit" class="btn btn-default">Submit</button>
+                                                </form>--->
+                                            @helper.form(routes.Application.submitBid()) {
+                                            Submit Bid
+                                               <p>
+                                                   <input type=number name="bid" placeholder="Bid">
+                                               </p>
+                                               <p>
+                                                   <input type=number name="artId" placeholder="Bid" value=@one.artid hidden>
+                                               </p>
+                                               <p>
+                                                   <button type="submit" class="btn btn-default">Submit</button>
+                                               </p>
+                                               }
+                                        </div>
+                                    </div>
+                                </div>
                               </div>
                             </div>
                           </div>
